@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en-US" }}">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>{{ page.title }}</title>
+    <!-- Bootstrap CSS, then Custom CSS, then AOS CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  </head>
+  <body>
+    <main role="main" data-aos="fade-in" data-aos-duration="1250">
+    	<div class="py-5 container-fluid">
+    		<div class="row text-center">
+    			<div class="col-12">
+    				<a class="navbar-brand" href="{{ site.url }}">Maddy Boardman</a>
+    			</div>
+    			<div class="col-12">
+    				<p>Creative Producer &amp; Photo Editor</p>
+    			</div>
+    		</div>
+  		</div>
+  		<div class="container-fluid">
+      	{{ content}}
+      </div>
+    </main>
+
+    <!-- jQuery first, then Bootstrap JS, then AOS JS, then Lazy Load -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    {% include lazyload.html %}
+  </body>
+</html>

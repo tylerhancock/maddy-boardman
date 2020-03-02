@@ -1,0 +1,69 @@
+$backgroundColor: #fff1e6;
+$bodyColor: #121212;
+$bodyFont: "Argent",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+
+body {
+  background: $backgroundColor;
+  color: $bodyColor;
+  font-family: $bodyFont;
+}
+
+@font-face {
+	font-family: 'Argent';
+	src: url('../webfonts/ArgentCF-Bold.eot'); /* IE9 Compat Modes */
+	src: url('../webfonts/ArgentCF-Bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../webfonts/ArgentCF-Bold.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../webfonts/ArgentCF-Bold.woff') format('woff'); /* Pretty Modern Browsers */
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+	font-family: 'Argent';
+	src: url('../webfonts/ArgentCF-Regular.eot'); /* IE9 Compat Modes */
+	src: url('../webfonts/ArgentCF-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../webfonts/ArgentCF-Regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../webfonts/ArgentCF-Regular.woff') format('woff'); /* Pretty Modern Browsers */
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Small tablets and large smartphones (landscape view) */
+$screen-sm-min: 576px;
+
+/* Small tablets (portrait view) */
+$screen-md-min: 768px;
+
+/* Tablets and small desktops */
+$screen-lg-min: 992px;
+
+/* Large tablets and desktops */
+$screen-xl-min: 1200px;
+
+/* Small devices */
+@mixin sm {
+  @media (min-width: #{$screen-sm-min}) {
+    @content;
+  }
+}
+
+/* Medium devices */
+@mixin md {
+  @media (min-width: #{$screen-md-min}) {
+    @content;
+  }
+}
+
+/* Large devices */
+@mixin lg {
+  @media (min-width: #{$screen-lg-min}) {
+    @content;
+  }
+}
+
+/* Extra large devices */
+@mixin xl {
+  @media (min-width: #{$screen-xl-min}) {
+    @content;
+  }
+}
